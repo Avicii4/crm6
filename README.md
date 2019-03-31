@@ -2,6 +2,8 @@
 
 ## 概述
 
+![PageView](https://github.com/Avicii4/crm6/blob/master/src/main/resources/view.jpg)
+
 一个使用 Spring 4.x + SpringMVC + Mybatis 3.x + Maven 实现的信息管理系统。
 
 IDE：IntelliJ IDEA 2018.3.6 (Ultimate Edition)
