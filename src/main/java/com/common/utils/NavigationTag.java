@@ -9,6 +9,7 @@ import javax.servlet.jsp.tagext.TagSupport;
 
 /**
  * 显示格式：上一页 1 2 3 4 5 下一页
+ *
  * @author Harry Chou
  */
 public class NavigationTag extends TagSupport {
@@ -21,7 +22,7 @@ public class NavigationTag extends TagSupport {
     private String bean = "page";
 
     /**
-     * 分页跳转的url地址
+     * 分页跳转的 URL 地址
      */
     private String url = null;
 
@@ -86,11 +87,12 @@ public class NavigationTag extends TagSupport {
     }
 
     /**
-     * 为 url 参加参数对儿
-     * @param url
-     * @param key
-     * @param value
-     * @return
+     * 为 URL 加入参数对
+     *
+     * @param url 传入的 URL
+     * @param key 键
+     * @param value 值
+     * @return 处理得到的 URL
      */
     private String append(String url, String key, String value) {
         if (url == null || url.trim().length() == 0) {
@@ -111,10 +113,11 @@ public class NavigationTag extends TagSupport {
     }
 
     /**
-     * 为url 添加翻页请求参数
-     * @param url
-     * @param pageContext
-     * @return
+     * 为 URL 添加翻页请求参数
+     *
+     * @param url 传入 URL
+     * @param pageContext 访问请求的内容
+     * @return 解析结果
      */
     private String resolveUrl(String url, javax.servlet.jsp.PageContext pageContext) {
         Map params = pageContext.getRequest().getParameterMap();
